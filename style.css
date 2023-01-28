@@ -1,12 +1,138 @@
 * {
-  box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/* reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	padding: unset;
+	margin: unset;
 }
 
 /* Add styles here! */
+:root {
+	/* width */
+	--width-1: 8px;
+
+	/* shape */
+	--shape-1: 4px;
+
+	/* spacing */
+	--spacing-1: 8px;
+	--spacing-2: 16px;
+	--spacing-3: 24px;
+	--spacing-4: 32px;
+	--spacing-5: 48px;
+	--spacing-6: 64px;
+	--spacing-7: 96px;
+	--spacing-8: 128px;
+
+	/* typography */
+	--text-xl: 2rem;
+	--text-lg: 1.5rem;
+	--text-md: 1.25rem;
+	--text-base: 1rem;
+
+	--weight-normal: 400;
+	--weight-medium: 600;
+	--weight-bold: 700;
+	--weight-extrabold: 800;
+
+	/* pallete */
+	--primary: hsl(160deg, 100%, 30%);
+	--secondary-light: hsl(45deg, 100%, 50%);
+	--secondary-dark: hsl(45deg, 100%, 40%);
+
+	--gray-100: hsl(0deg, 0%, 100%);
+	--gray-200: hsl(0deg, 0%, 60%);
+	--gray-300: hsl(0deg, 0%, 40%);
+	--gray-400: hsl(0deg, 0%, 30%);
+	--gray-500: hsl(0deg, 0%, 10%);
+	--gray-600: hsl(0deg, 0%, 0%);
+}
+
+header {
+	padding-block-start: var(--spacing-7);
+	padding-block-end: var(--spacing-6);
+	border-block-end: solid var(--width-1) var(--gray-200);
+}
+
+strong {
+	color: var(--primary);
+}
+
+p {
+	font-size: var(--text-md);
+	line-height: 150%;
+}
+
+em {
+	font-style: normal;
+}
+
+.max-width-wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 756px;
+}
+
+.intro-chunk {
+	padding-left: var(--spacing-3);
+}
+
+.intro-chunk .title {
+	margin-bottom: var(--spacing-5);
+}
+
+.intro-chunk p {
+	max-width: 415px;
+}
+
+.intro-chunk p:first-of-type {
+	margin-bottom: var(--spacing-2);
+}
+
+main {
+	background-color: var(--gray-300);
+}
+
+main section.max-width-wrapper {
+	padding-top: var(--spacing-6);
+	padding-bottom: var(--spacing-5);
+}
+
+.card {
+	padding: var(--spacing-3);
+	padding-top: var(--spacing-1);
+	background-color: var(--gray-100);
+	border-bottom: solid var(--width-1) var(--gray-200);
+	border-radius: var(--shape-1);
+}
+
+.card .indented-heading {
+	padding: var(--spacing-2) var(--spacing-4);
+	margin-bottom: var(--spacing-2);
+	margin-left: calc(var(--spacing-4) * -1);
+
+	width: fit-content;
+	font-size: var(--text-md);
+	background-color: var(--secondary-light);
+	border-bottom: solid var(--width-1) var(--secondary-dark);
+	border-radius: var(--shape-1);
+}
+
+.card p:first-of-type {
+	margin-bottom: var(--spacing-2);
+}
