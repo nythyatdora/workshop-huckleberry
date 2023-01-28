@@ -89,7 +89,7 @@ em {
 }
 
 .intro-chunk {
-	padding-left: var(--spacing-3);
+	padding: 0 var(--spacing-3);
 }
 
 .intro-chunk .title {
@@ -115,13 +115,13 @@ main section.max-width-wrapper {
 
 .card {
 	padding: var(--spacing-3);
-	padding-top: var(--spacing-1);
 	background-color: var(--gray-100);
 	border-bottom: solid var(--width-1) var(--gray-200);
 	border-radius: var(--shape-1);
 }
 
 .card .indented-heading {
+	margin-top: calc(var(--spacing-2) * -1);
 	padding: var(--spacing-2) var(--spacing-4);
 	margin-bottom: var(--spacing-2);
 	margin-left: calc(var(--spacing-4) * -1);
